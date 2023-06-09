@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+<style name="Theme.AdivaHRIS" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimaryDark">#7183D9</item>
+    <item name="alertDialogTheme">@style/FullscreenDialogTheme</item>
+    <!-- Customize your theme here. -->
+</style>
+<style name="Theme.AdivaHRIS.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+</style>
+<style name="Theme.AdivaHRIS.AppBarOverlay"
+    parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+<style name="Theme.AdivaHRIS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<style name="IconCard">
+    <item name="cardCornerRadius">8dp</item>
+    <item name="cardBackgroundColor">@color/white</item>
+    <item name="cardElevation">7dp</item>
+    <item name="cardUseCompatPadding">true</item>
+</style>
+
+<style name="Rectanggle">
+    <item name="cardBackgroundColor">@color/colorPrimaryDark</item>
+    <item name="cardElevation">7dp</item>
+</style>
+
+    <style name="FullscreenDialogTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TabLayout" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

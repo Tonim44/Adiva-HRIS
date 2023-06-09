@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AdivaHRIS"
+        tools:targetApi="31">
+
+        <provider
+            android:authorities="id.co.adiva.attendance.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.kehadiran.ListKehadiranActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.kehadiran.KehadiranActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.kehadiran.fragment.MapsHadirActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.slipgaji.ListSlipGajiActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.slipgaji.SlipGajiActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".profile.SettingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".profile.SettingUsernameActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".profile.SettingSandiActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".pengumuman.PengumumanActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.CheckInActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.CheckOutActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.MapsIsiActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.pengajuan.PengajuanActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".NoConnectedActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
